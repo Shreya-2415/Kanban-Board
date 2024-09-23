@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+  font-family: 'Arial';
+  background-color: #f4f5f8;
+  margin: 0;
+  padding: 0;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Add any additional global styles here */
