@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// import React from 'react'; 
-=======
-// import React from 'react';
->>>>>>> 8bcf26e41f47aa1ccc5089f98d9872354ff074bd
 import BacklogIcon from '../Icons/icons_FEtask/Backlog.svg';
 import TodoIcon from '../Icons/icons_FEtask/To-do.svg';
 import InProgressIcon from '../Icons/icons_FEtask/in-progress.svg';
@@ -59,11 +54,7 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
     // Defining the correct order for priority groups
     const priorityOrder = ['No priority', 'Urgent', 'High', 'Medium', 'Low'];
   
-<<<<<<< HEAD
-    // Sorting the tickets within each group based on sortOrder
-=======
     // Sorting tickets within each group based on sortOrder
->>>>>>> 8bcf26e41f47aa1ccc5089f98d9872354ff074bd
     Object.keys(grouped).forEach(key => {
       grouped[key].sort((a, b) => {
         if (sortOrder === 'priority') {
