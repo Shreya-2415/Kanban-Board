@@ -1,8 +1,6 @@
-// ticketUtils.js
 import React from 'react';
 import BacklogIcon from '../Icons/icons_FEtask/Backlog.svg';
 import TodoIcon from '../Icons/icons_FEtask/To-do.svg';
-// import InProgressIcon from '../Icons/icons_FEtask/in-progress.svg';
 import InProgressIcon from '../Icons/icons_FEtask/in-progress.svg';
 import DoneIcon from '../Icons/icons_FEtask/Done.svg';
 import CancelledIcon from '../Icons/icons_FEtask/Cancelled.svg';
@@ -15,10 +13,10 @@ import LowIcon from '../Icons/icons_FEtask/Img - Low Priority.svg';
 import NoPriorityIcon from '../Icons/icons_FEtask/No-priority.svg';
 
 export const groupTickets = (tickets, users, groupBy, sortOrder) => {
-    // Initialize the grouped object based on the grouping criteria
+    // Initializing the grouped object based on the grouping criteria
     const grouped = {};
   
-    // If grouping by status, ensure "Done" and "Canceled" are present even if empty
+    // If grouping by status, ensuring "Done" and "Canceled" are present even if empty
     if (groupBy === 'status') {
       grouped['Backlog'] = [];
       grouped['Todo'] = [];
@@ -27,7 +25,7 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
       grouped['Canceled'] = [];
     }
   
-    // Iterate over the tickets and group them accordingly
+    // Iterating over the tickets and grouping them accordingly
     tickets.forEach(ticket => {
       let key;
       switch (groupBy) {
@@ -45,23 +43,23 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
           key = 'Other';
       }
   
-      // Initialize the group if it does not exist
+      // Initializing the group if it does not exist
       if (!grouped[key]) {
         grouped[key] = [];
       }
   
-      // Add the ticket to the appropriate group
+      // Adding the ticket to the appropriate group
       grouped[key].push(ticket);
     });
   
-    // Define the correct order for priority groups
+    // Defining the correct order for priority groups
     const priorityOrder = ['No priority', 'Urgent', 'High', 'Medium', 'Low'];
   
-    // Sort tickets within each group based on sortOrder
+    // Sorting tickets within each group based on sortOrder
     Object.keys(grouped).forEach(key => {
       grouped[key].sort((a, b) => {
         if (sortOrder === 'priority') {
-          // Use the index of priority levels for correct sorting
+          // Using the index of priority levels for correct sorting
           const priorityA = priorityOrder.indexOf(getPriorityLabel(a.priority));
           const priorityB = priorityOrder.indexOf(getPriorityLabel(b.priority));
           return priorityA - priorityB;
@@ -98,7 +96,6 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
     }
   };
   
-  // Function to map status strings to their corresponding icons
   export const getPriorityIcon = (status) => {
     switch (status.toLowerCase()) {
       case 'urgent' : return UrgentIcon;
@@ -118,8 +115,6 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
       case 'in progress': return InProgressIcon;
       case 'done': return DoneIcon;
       case 'canceled': return CancelledIcon ;
-    //   default: return BacklogIcon;
-    //   default: return InProgressIcon;
     }
   };
   
