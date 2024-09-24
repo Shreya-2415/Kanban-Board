@@ -6,11 +6,7 @@ import { ReactComponent as Add } from '../Icons/icons_FEtask/add.svg';
 import { getStatusIcon } from '../utils/ticketUtils';
 import { getPriorityIcon } from '../utils/ticketUtils';
 
-<<<<<<< HEAD
-function Column({ title, tickets, users }) { 
-=======
 function Column({ title, tickets, users }) {
->>>>>>> 8bcf26e41f47aa1ccc5089f98d9872354ff074bd
   const StatusIcon = getStatusIcon(title); 
   const PriorityIcon = getPriorityIcon(title); 
 
