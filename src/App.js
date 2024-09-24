@@ -1,48 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import Header from './components/Header';
-// import KanbanBoard from './components/KanbanBoard';
-// import './App.css';
-// // import { useViewState } from '../src/utils/utils.js';
-// // import { FaChevronDown, FaPlus, FaCircle, FaExclamationCircle } from 'react-icons/fa';
-
-// function App() {
-//   const [tickets, setTickets] = useState([]);
-//   const [users, setUsers] = useState([]);
-//   const [groupBy, setGroupBy] = useState('status');
-//   const [sortOrder, setSortOrder] = useState('priority');
-
-//   useEffect(() => {
-//     axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
-//       .then(response => {
-//         setTickets(response.data.tickets);
-//         setUsers(response.data.users);
-//       })
-//       .catch(error => {
-//         console.error('Error fetching data:', error);
-//       });
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <Header
-//         groupBy={groupBy}
-//         setGroupBy={setGroupBy}
-//         sortOrder={sortOrder}
-//         setSortOrder={setSortOrder}
-//       />
-//       <KanbanBoard
-//         tickets={tickets}
-//         users={users}
-//         groupBy={groupBy}
-//         sortOrder={sortOrder}
-//       />
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './components/Header';
@@ -52,10 +7,10 @@ import './App.css';
 function App() {
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
-  const [groupBy, setGroupBy] = useState(() => localStorage.getItem('groupBy') || 'status'); // Load initial state from localStorage or default to 'status'
-  const [sortOrder, setSortOrder] = useState(() => localStorage.getItem('sortOrder') || 'priority'); // Load initial state from localStorage or default to 'priority'
+  const [groupBy, setGroupBy] = useState(() => localStorage.getItem('groupBy') || 'status'); // Loading initial state from localStorage or default to 'status'
+  const [sortOrder, setSortOrder] = useState(() => localStorage.getItem('sortOrder') || 'priority'); // Loading initial state from localStorage or default to 'priority'
 
-  // Fetch tickets and users data
+  // Fetching tickets and users data
   useEffect(() => {
     axios.get('https://api.quicksell.co/v1/internal/frontend-assignment')
       .then(response => {
