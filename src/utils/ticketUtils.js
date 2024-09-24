@@ -103,6 +103,7 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
       case 'medium': return MediumIcon;
       case 'low': return LowIcon;
       case 'no priority': return NoPriorityIcon ;
+      default: return;
     }
   };
 
@@ -115,6 +116,7 @@ export const groupTickets = (tickets, users, groupBy, sortOrder) => {
       case 'in progress': return InProgressIcon;
       case 'done': return DoneIcon;
       case 'canceled': return CancelledIcon ;
+      default: return;
     }
   };
   
