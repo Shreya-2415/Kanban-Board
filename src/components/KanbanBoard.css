@@ -5,7 +5,10 @@
     height: calc(100vh - 60px); 
   }
   
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8bcf26e41f47aa1ccc5089f98d9872354ff074bd
   @media (max-width: 768px) {
     .kanban-board {
       flex-direction: column;
