@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useViewState } from '../utils/utils.js';
 
 function DisplayOptions({ setGroupBy, setSortOrder }) {
   return (

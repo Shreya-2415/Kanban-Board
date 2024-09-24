@@ -2,10 +2,10 @@
     display: flex;
     overflow-x: auto;
     padding: 20px;
-    height: calc(100vh - 60px); /* Adjust based on your header height */
+    height: calc(100vh - 60px); 
   }
   
-  /* Add responsive styles for smaller screens if needed */
+
   @media (max-width: 768px) {
     .kanban-board {
       flex-direction: column;
